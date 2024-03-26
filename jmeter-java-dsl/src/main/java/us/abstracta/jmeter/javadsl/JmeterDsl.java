@@ -4,14 +4,14 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.function.Function;
+
+import com.sap.csc.ems.config.EMSConfig;
 import us.abstracta.jmeter.javadsl.core.DslTestElement;
 import us.abstracta.jmeter.javadsl.core.DslTestPlan;
 import us.abstracta.jmeter.javadsl.core.DslTestPlan.TestPlanChild;
 import us.abstracta.jmeter.javadsl.core.assertions.DslJsonAssertion;
 import us.abstracta.jmeter.javadsl.core.assertions.DslResponseAssertion;
-import us.abstracta.jmeter.javadsl.core.configs.DslCounter;
-import us.abstracta.jmeter.javadsl.core.configs.DslCsvDataSet;
-import us.abstracta.jmeter.javadsl.core.configs.DslVariables;
+import us.abstracta.jmeter.javadsl.core.configs.*;
 import us.abstracta.jmeter.javadsl.core.controllers.DslForEachController;
 import us.abstracta.jmeter.javadsl.core.controllers.DslIfController;
 import us.abstracta.jmeter.javadsl.core.controllers.DslOnceOnlyController;
@@ -1839,6 +1839,14 @@ public class JmeterDsl {
    */
   public static TestResource testResource(String resourcePath) throws IllegalArgumentException {
     return new TestResource(resourcePath);
+  }
+
+  public static DslEMSConfig emsConfig() {
+    return new DslEMSConfig();
+  }
+
+  public static DslEMSIntegrationToken emsIntegrationToken() {
+    return new DslEMSIntegrationToken();
   }
 
 }

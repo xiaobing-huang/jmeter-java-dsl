@@ -18,6 +18,14 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.sap.csc.ems</groupId>
+      <artifactId>ems-jmeter-plugin</artifactId>
+      <version>0.1.4</version>
+      <scope>system</scope>
+      <systemPath>/Users/I074455/Projects/github.wdf.sap.corp/Entitlement/ems-ta/lib/ems-jmeter-plugin-0.1.4.jar</systemPath>
+    </dependency>
+
+    <dependency>
       <groupId>org.apache.jmeter</groupId>
       <artifactId>ApacheJMeter_http</artifactId>
       <version>${jmeter.version}</version>

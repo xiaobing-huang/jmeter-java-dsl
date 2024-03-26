@@ -24,6 +24,24 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.sap.csc.ems</groupId>
+      <artifactId>ems-jmeter-plugin</artifactId>
+      <version>0.1.4</version>
+      <scope>system</scope>
+      <systemPath>/Users/I074455/Projects/github.wdf.sap.corp/Entitlement/ems-ta/lib/ems-jmeter-plugin-0.1.4.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.delirius325</groupId>
+      <artifactId>jmeter-elasticsearch-backend-listener</artifactId>
+      <version>2.7.0</version>
+      <!-- using dependency as optional since we need to shade the entire artifact (including this
+      dependency) to avoid issues introduced by this dependency already shading some other
+      dependencies (like guava) which later on conflict with other libraries when this artifact is
+      used as dependency -->
+<!--      <optional>true</optional>-->
+    </dependency>
+    <dependency>
       <groupId>us.abstracta.jmeter</groupId>
       <artifactId>jmeter-java-dsl</artifactId>
       <version>${project.version}</version>
