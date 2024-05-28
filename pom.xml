@@ -65,7 +65,7 @@
   <modules>
     <module>jmeter-java-dsl</module>
     <module>jmeter-java-dsl-base-remote-engine</module>
-    <module>jmeter-java-dsl-blazemeter</module>
+<!--    <module>jmeter-java-dsl-blazemeter</module>-->
     <module>jmeter-java-dsl-elasticsearch-listener</module>
     <module>jmeter-java-dsl-dashboard</module>
     <module>jmeter-java-dsl-parallel</module>
@@ -73,9 +73,9 @@
     <module>jmeter-java-dsl-wrapper</module>
     <module>jmeter-java-dsl-cli</module>
     <module>jmeter-java-dsl-graphql</module>
-    <module>jmeter-java-dsl-octoperf</module>
+<!--    <module>jmeter-java-dsl-octoperf</module>-->
     <module>jmeter-java-dsl-recorder</module>
-    <module>jmeter-java-dsl-azure</module>
+<!--    <module>jmeter-java-dsl-azure</module>-->
     <module>jmeter-java-dsl-datadog</module>
     <module>jmeter-java-dsl-bridge</module>
     <module>jmeter-java-dsl-prometheus</module>

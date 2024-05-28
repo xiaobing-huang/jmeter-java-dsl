@@ -27,20 +27,23 @@
       <groupId>com.sap.csc.ems</groupId>
       <artifactId>ems-jmeter-plugin</artifactId>
       <version>0.1.4</version>
-      <scope>system</scope>
-      <systemPath>/Users/I074455/Projects/github.wdf.sap.corp/Entitlement/ems-ta/lib/ems-jmeter-plugin-0.1.4.jar</systemPath>
     </dependency>
 
-    <dependency>
-      <groupId>com.github.delirius325</groupId>
-      <artifactId>jmeter-elasticsearch-backend-listener</artifactId>
-      <version>2.7.0</version>
-      <!-- using dependency as optional since we need to shade the entire artifact (including this
-      dependency) to avoid issues introduced by this dependency already shading some other
-      dependencies (like guava) which later on conflict with other libraries when this artifact is
-      used as dependency -->
-<!--      <optional>true</optional>-->
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>com.github.delirius325</groupId>-->
+<!--      <artifactId>jmeter-elasticsearch-backend-listener</artifactId>-->
+<!--      <version>2.7.0</version>-->
+<!--      &lt;!&ndash; using dependency as optional since we need to shade the entire artifact (including this-->
+<!--      dependency) to avoid issues introduced by this dependency already shading some other-->
+<!--      dependencies (like guava) which later on conflict with other libraries when this artifact is-->
+<!--      used as dependency &ndash;&gt;-->
+<!--&lt;!&ndash;      <optional>true</optional>&ndash;&gt;-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>com.github.delirius325</groupId>-->
+<!--      <artifactId>jmeter-elasticsearch-backend-listener</artifactId>-->
+<!--      <version>2.7.0</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>us.abstracta.jmeter</groupId>
       <artifactId>jmeter-java-dsl</artifactId>
@@ -105,13 +108,13 @@
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>us.abstracta.jmeter</groupId>
-      <artifactId>jmeter-java-dsl-recorder</artifactId>
-      <type>test-jar</type>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>us.abstracta.jmeter</groupId>-->
+<!--      <artifactId>jmeter-java-dsl-recorder</artifactId>-->
+<!--      <type>test-jar</type>-->
+<!--      <version>${project.version}</version>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
     <!-- This should be in test scope, but defined in compile scope to avoid shade ignoring it -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -155,6 +158,7 @@
               dependencies that may not be needed by cli and can be excluded  -->
               <artifactSet>
                 <includes>
+                  <include>com.sap.csc.ems:*</include>
                   <include>us.abstracta.jmeter:*</include>
                   <include>org.apache.jmeter:*</include>
                   <include>org.slf4j:slf4j-api</include>
@@ -257,5 +261,10 @@
       </plugin>
     </plugins>
   </build>
-
+  <repositories>
+    <repository>
+      <id>project-repository</id>
+      <url>file://${project.basedir}/repository</url>
+    </repository>
+  </repositories>
 </project>
